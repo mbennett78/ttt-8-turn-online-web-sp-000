@@ -51,7 +51,7 @@ def turn(board)
   char = gets.chomp
   index = input_to_index(answer)
   if valid_move?(board,index)==true
-      move (board, index)
+      move (board,index, char)
       display_board(board)
   else
     puts "This is an invalid move."
