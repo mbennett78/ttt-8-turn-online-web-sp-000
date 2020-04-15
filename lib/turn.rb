@@ -10,7 +10,7 @@ end
 
 # This method will convert the input from the user to an index on the board since index starts counting from 0
 def input_to_index(input)
-   input = input.to_i
+   input = input.to_i 
    index = input - 1
 end
 
