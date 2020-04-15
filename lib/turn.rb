@@ -26,7 +26,7 @@ def position_taken?(board,input)
   index = input_to_index(input)
   if board[index] != " "
     return true
-  else 
+  else
     return false
   end
 end
@@ -53,4 +53,3 @@ def turn(board)
     turn(board)
   end
 end
-   
