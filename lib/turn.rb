@@ -10,7 +10,7 @@ end
 
 # This method will convert the input from the user to an index on the board since index starts counting from 0
 def input_to_index(input)
-   index = input.to_i -1
+   index = (input.to_i)- 1
 end
 
 
@@ -35,7 +35,12 @@ end
 #This method needs to make sure the move is valid by making sure the input is 1-9 and the position is open
 def valid_move?(board, number_entered)
    index = input_to_index(number_entered)
-   index.between?(0,8) && !position_taken?(board,number_entered)
+   if index >= 0 && index <= 8 && position_taken?(board,number_entered) ==false
+     return true
+
+  else 
+    return false
+  end
 end
 
 
