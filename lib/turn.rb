@@ -35,7 +35,7 @@ end
 #This method needs to make sure the move is valid by making sure the input is 1-9 and the position is open
 def valid_move?(board, number_entered)
    index = input_to_index(number_entered)
-   index.between?(0,8) && !position_taken?(board,number_entereed)
+   index.between?(0,8) && !position_taken?(board,number_entered)
 end
 
 
