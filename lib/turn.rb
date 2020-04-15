@@ -10,13 +10,14 @@ end
 
 # This method will convert the input from the user to an index on the board since index starts counting from 0
 def input_to_index(input)
-   index = input.to_i- 1
+   input = input.to_i 
+   index = input - 1
 end
 
 
 #This method describes what must change in order to make a move
 # In order to make a move, you must have the state of the board, the user selects a location as input, and applies their token to that spot
-def move(board, input, token="X")
+def move (board, input, token="X")
   index = input_to_index(input)
   board[index] = token
 end
