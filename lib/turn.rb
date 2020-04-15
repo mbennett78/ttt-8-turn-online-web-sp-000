@@ -34,8 +34,9 @@ end
 
 
 #This method needs to make sure the move is valid by making sure the input is 1-9 and the position is open
-def valid_move?(board, index)
-   index = input_to_index(index)
+def valid_move?(board,input)
+  
+   index = input_to_index(input)
    if (index >= 0 && index <= 8) && position_taken?(board,number_entered)!=true
      return true
 
