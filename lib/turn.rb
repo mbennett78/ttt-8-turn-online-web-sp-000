@@ -50,7 +50,7 @@ def turn(board)
   answer = gets.chomp
   puts "Please enter your token X or O:"
   token = gets.chomp
-  if valid_move?(board, answer)
+  if valid_move?(board,answer)==true
       move (board, answer, token=token)
       display_board(board)
   else
