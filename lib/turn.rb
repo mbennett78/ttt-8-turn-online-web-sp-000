@@ -44,7 +44,7 @@ def turn(board)
   answer = gets.strip
   answer = input_to_index(answer)
   if valid_move?(board,answer)==true
-      move (board,answer, char="X")
+      move(board,answer)
       display_board(board)
   else
     puts "This is an invalid move."
