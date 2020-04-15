@@ -49,9 +49,9 @@ def turn(board)
   puts "Please enter a move 1-9:"
   answer = gets.chomp
   puts "Please enter your token X or O:"
-  token = gets.chomp
+  char = gets.chomp
   if valid_move?(board,answer)==true
-      move (board, answer, token=token)
+      move (board, answer, char)
       display_board(board)
   else
     puts "This is an invalid move."
