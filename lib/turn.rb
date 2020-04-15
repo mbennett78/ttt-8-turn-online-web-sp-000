@@ -17,14 +17,13 @@ end
 
 #This method describes what must change in order to make a move
 # In order to make a move, you must have the state of the board, the user selects a location as input, and applies their token to that spot
-def move (board, input, token="X")
-  index = input_to_index(input)
+def move (board, index, token="X")
   board[index] = token
 end
 
 #This method will look at the board and go to the input to see if the position already has a token of X or O
-def position_taken?(board,input)
-  index = input_to_index(input)
+def position_taken?(board,index)
+  index=index.to_i
   if board[index] != " "
     return true
   else
@@ -34,9 +33,7 @@ end
 
 
 #This method needs to make sure the move is valid by making sure the input is 1-9 and the position is open
-def valid_move?(board,input)
-
-   index = input_to_index(input)
+def valid_move?(board,index)
    if (index >= 0 && index <= 8) && position_taken?(board,number_entered)!=true
      return true
 
@@ -48,14 +45,13 @@ end
 
 #This method allows the user to take a turn playing the game
 def turn(board)
-  answer = nil
-  char = nil
   puts "Please enter a move 1-9:"
   answer = gets.chomp
   puts "Please enter your token X or O:"
   char = gets.chomp
-  if valid_move?(board, answer)==true
-      move (board, answer, char=char)
+  index = input_to_index(answer)
+  if valid_move?(board,index)==true
+      move (board, index, char=char)
       display_board(board)
   else
     puts "This is an invalid move."
