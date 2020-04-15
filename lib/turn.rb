@@ -45,7 +45,7 @@ end
 
 #This method allows the user to take a turn playing the game
 def turn(board)
-  puts "Please enter a move 1-9:"
+  puts "Please enter 1-9:"
   answer = gets.chomp
   puts "Please enter your token X or O:"
   char = gets.chomp
