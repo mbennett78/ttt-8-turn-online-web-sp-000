@@ -48,11 +48,13 @@ end
 
 #This method allows the user to take a turn playing the game
 def turn(board)
+  answer = nil
+  char = nil
   puts "Please enter a move 1-9:"
   answer = gets.chomp
   puts "Please enter your token X or O:"
   char = gets.chomp
-  if valid_move?(board,answer)==true
+  if valid_move?(board, answer)==true
       move (board, answer, char=char)
       display_board(board)
   else
